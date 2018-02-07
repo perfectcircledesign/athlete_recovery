@@ -65,15 +65,11 @@ class UsersController < ApplicationController
 end
 
   def destroy
+    @user = User.find(params[:id])
     @user.destroy
     respond_to do |format|
       format.html { redirect_to admin_url, notice: 'User was successfully deleted.' }
       format.json { head :no_content }
     end
-end
-end
-
-private 
-  def user_params
-    params.require(:user).permit(:name, :surname, :id_number, :email, :phone, :resting_heart_rate, :blood_gas_test)
   end
+end
