@@ -7,9 +7,10 @@
   <Worksheet ss:Name="Sheet1">
     <Table>
       <Row>
+        <Cell><Data ss:Type="String">ID</Data></Cell>
         <Cell><Data ss:Type="String">Name</Data></Cell>
         <Cell><Data ss:Type="String">Surname</Data></Cell>
-        <Cell><Data ss:Type="String">ID</Data></Cell>
+        <Cell><Data ss:Type="String">ID_DUMBER</Data></Cell>
         <Cell><Data ss:Type="String">EMAIL</Data></Cell>
         <Cell><Data ss:Type="String">PHONE</Data></Cell>
         <Cell><Data ss:Type="String">HEART RATE</Data></Cell>
@@ -17,6 +18,7 @@
       </Row>
     <% @users.each do |user| %>
       <Row>
+        <Cell><Data ss:Type="String"><%= user.id %></Data></Cell>
         <Cell><Data ss:Type="String"><%= user.name %></Data></Cell>
         <Cell><Data ss:Type="String"><%= user.surname %></Data></Cell>
         <Cell><Data ss:Type="String"><%= user.id_number %></Data></Cell>

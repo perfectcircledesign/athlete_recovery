@@ -18,6 +18,7 @@
 	<th>RESTING HEART RATE</th>
 	<th>BLOOD GAS TEST</th>
 	<th>SIGN_UP_DATE</th>
+	<th>ACTIONS</th>
 <%@users.each do |user| %>
 	<tr>
 		<td><%=user.name%></td>
@@ -28,6 +29,7 @@
 		<td><%=user.resting_heart_rate%></td>
 		<td><%=user.blood_gas_test%></td>
 		<td><%=user.created_at%></td>
+		<td><%= link_to "Edit", edit_user_path(user) %></td>
 	</tr>
 	<%end%>
 </table>

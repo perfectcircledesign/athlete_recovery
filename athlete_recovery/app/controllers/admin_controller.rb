@@ -10,8 +10,8 @@ before_filter :authenticate_admin!
 
     respond_to do |format|
       format.html
-      format.csv {send_data @users.to_csv(col_sep: ",")}
-      format.xls #{send_data @r_volunteers.to_csv(col_sep: "\t")}
+      format.csv {send_data @users.to_csv}
+      format.xls
     end
   end
 end

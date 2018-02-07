@@ -8,8 +8,11 @@ AthleteRecovery::Application.routes.draw do
         get :print_users
       end
 
+  resources :admin
   resources :users
 
   get '/users' => 'users#new'
+  get '/users/:id' => 'users#edit'
+  post '/users/:id' => 'users#update'
 
 end
