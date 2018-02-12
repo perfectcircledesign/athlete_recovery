@@ -10,12 +10,6 @@ class UsersController < ApplicationController
     end
   end
 
-  # GET /users/1
-  # GET /users/1.json
-  
-
-  # GET /users/new
-  # GET /users/new.json
   def new
     @user = User.new
 
@@ -25,19 +19,20 @@ class UsersController < ApplicationController
     end
   end
 
-  # GET /users/1/edit
- 
   def create
     @user = User.new(params[:user])
 
     respond_to do |format|
-      if @user.save
-        format.html { redirect_to :back, notice: 'User was successfully created.' }
-        format.json { render json: @user, status: :created, location: @user }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+      if params[:user][:blood_gas_test] == '1' and params[:accept].present?
+        if @user.save
+          format.html { redirect_to :back, notice: 'The form has been submitted successfully' }
+          format.json { render json: @user, status: :created, location: @user }
+        else
+          format.html { render action: "new" }
+          format.json { render json: @user.errors, status: :unprocessable_entity }
+        end
       end
+      format.html { redirect_to :back, notice: 'You need to tick all the checkboxes to submit the form' }
     end
   end
 

@@ -11,3 +11,107 @@
  *= require_self
  *= require_tree .
  */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #444444;
+    font-size: 16px;
+    line-height: 1.5; }
+
+@font-face {
+    font-family: 'Sinkin Sans 400';
+    src: url("../fonts/SinkinSans-400Regular.eot");
+    src: url("../fonts/SinkinSans-400Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/SinkinSans-400Regular.woff2") format("woff2"), url("../fonts/SinkinSans-400Regular.woff") format("woff"), url("../fonts/SinkinSans-400Regular.ttf") format("truetype"), url("../fonts/SinkinSans-400Regular.svg#SinkinSans-400Regular") format("svg");
+    font-weight: normal;
+    font-style: normal; }
+h1, h3 {
+    font-family: 'Sinkin Sans 400', sans-serif; }
+
+.header {
+    height: 700px;
+    background: url(banner.jpg) center bottom/cover;
+    padding: 80px 0; }
+.header h1, .header h3 {
+    color: #ffffff; }
+.header h1 {
+    font-size: 60px;
+    margin: 0; }
+.header h3 {
+    font: 30px;
+    margin: 10px 0 0; }
+
+.body-text {
+    padding: 60px 0 160px; }
+.body-text h1 {
+    color: #80deea;
+    margin: 0 0 60px;
+    font-size: 48px; }
+.body-text p {
+    font-size: 16px;
+    margin-bottom: 20px; }
+
+.form {
+    background: url(gradient.jpg) center bottom/cover; }
+.form .form-box {
+    background: #fff;
+    border: 1px solid #b7b7b7;
+    position: relative;
+    top: -100px;
+    padding: 30px; }
+.form .form-box h1 {
+    color: #80deea;
+    margin: 0 0 60px;
+    font-size: 36px; }
+.form .form-box input[type='text'] {
+    border: none;
+    border-bottom: 1px solid #b7b7b7;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 5px; }
+.form .form-box ::-webkit-input-placeholder {
+    color: #444444; }
+.form .form-box :-moz-placeholder {
+    /* Firefox 18- */
+    color: #444444; }
+.form .form-box ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #444444; }
+.form .form-box :-ms-input-placeholder {
+    color: #444444; }
+.form .form-box label {
+    font-weight: 300; }
+.form .form-box .terms {
+    font-size: 12px;
+    border: 1px solid #b7b7b7;
+    padding: 5px;
+    height: 150px;
+    overflow-y: scroll;
+    margin: 30px 0; }
+.form .form-box .button {
+    background: #80deea;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+    font-family: 'Sinkin Sans 400', sans-serif;
+    border: none;
+    padding: 15px 0;
+    margin-top: 30px; }
+
+.copyright {
+    background: #333333;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0; }
+
+@media (max-width: 767px) {
+    .header {
+        height: 300px;
+        height: 50vw;
+        padding: 15px 0; }
+    .header h1 {
+        font-size: 30px; }
+    .header h3 {
+        font-size: 15px; } }
+
+/*# sourceMappingURL=application.css.map */
