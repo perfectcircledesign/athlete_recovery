@@ -1,5 +1,5 @@
 
-<div class="form">
+<div class="form" style="margin-top: 150px;">
   <div class="container">
     <div class="row">
       <%= form_for(@user) do |f| %>
@@ -16,23 +16,23 @@
           <% end %>
           <div class="col-xs-12 col-sm-6 col-sm-offset-3">
             <div class="form-box">
-              <h1>Sign up</h1>
-              <label>Name</label>
-              <%= f.text_field :name, placeholder: "Name" %>
-              <label>Surname</label>
-              <%= f.text_field :surname, placeholder: "Surname" %>
-              <label>ID Number</label>
-              <%= f.text_field :id_number, placeholder: "ID Number" %>
-              <label>Email</label>
-              <%= f.text_field :email, placeholder: "Email" %>
-              <label>Phone</label>
-              <%= f.text_field :phone, placeholder: "Phone" %>
-              <label>Resting Heart Rate</label>
-              <%= f.number_field :resting_heart_rate %>
+              <h1>EDIT USER</h1>
+              <label>Name:</label>
+              <%= f.text_field :name %>
+              <label>Surname:</label>
+              <%= f.text_field :surname%>
+              <label>ID Number:</label>
+              <%= f.text_field :id_number %>
+              <label>Email:</label>
+              <%= f.text_field :email %>
+              <label>Phone:</label>
+              <%= f.text_field :phone %>
+              <label>Resting Heart Rate:</label><br>
+              <%= f.number_field :resting_heart_rate, :style => "border: none; border-bottom: 1px solid #b7b7b7;margin-bottom: 30px;padding: 5px;" %>
               <br>
 
               <%= f.submit "Save", :class=> "button"%>
-              <%= link_to "Back", admin_path %>
+              <%= link_to "Back", admin_path , :class=> "btn"%>
             </div>
           </div>
       <%end%>

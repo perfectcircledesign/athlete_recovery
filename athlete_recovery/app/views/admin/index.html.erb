@@ -1,25 +1,30 @@
 
 <% if admin_signed_in? %>
+    <div class="nav navbar-collapse ">
 	<li><%= link_to current_admin.email, edit_admin_registration_path %></li>
 	<li><%= link_to "Log Out", destroy_admin_session_path, method: :delete %></li>
+    </div>
 <%else%>
 	<li><%= link_to "Sign Up", new_admin_registraion_path %></li>
 	<li><%= link_to "Log In", new_admin_session_path %></li>
 <%end%>
+<hr>
+<%= link_to "Download Excel", admin_print_users_path(format: "xls"), :class => "btn btn-primary" %>
+<%= link_to "Download CSV", admin_print_users_path(format: "csv"), :class => "btn btn-primary" %>
+<hr>
 
-<%= link_to "Download Excel", admin_print_users_path(format: "xls"), :class => "btn btn-green" %>
-<%= link_to "Download CSV", admin_print_users_path(format: "csv"), :class => "btn btn-green" %>
-
-<table border=1>
-	<th>NAME</th>
-	<th>SURNAME</th>
-	<th>ID NUMBER</th>
-	<th>EMAIL</th>
-	<th>PHONE</th>
-	<th>RESTING HEART RATE</th>
-	<th>BLOOD GAS TEST</th>
-	<th>SIGN_UP_DATE</th>
-	<th>ACTIONS</th>
+<table class="table table-responsive">
+  <tr>
+    <th>NAME</th>
+    <th>SURNAME</th>
+    <th>ID NUMBER</th>
+    <th>EMAIL</th>
+    <th>PHONE</th>
+    <th>RESTING HEART RATE</th>
+    <th>BLOOD GAS TEST</th>
+    <th>SIGN_UP_DATE</th>
+    <th>ACTIONS</th>
+  </tr>
 <%@users.each do |user| %>
 	<tr>
 		<td><%=user.name%></td>

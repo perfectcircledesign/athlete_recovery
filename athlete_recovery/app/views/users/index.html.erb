@@ -62,12 +62,12 @@
             <%= f.text_field :id_number, placeholder: "ID Number" %>
             <%= f.text_field :email, placeholder: "Email" %>
             <%= f.text_field :phone, placeholder: "Phone" %>
-            <%= f.number_field :resting_heart_rate %>
-          <br>
+            <%= f.number_field :resting_heart_rate, placeholder: "Resting Heart Rate", :style => "border: none; border-bottom: 1px solid #b7b7b7;margin-bottom: 30px;padding: 5px;" %>
+          <br><hr>
 
           <div class="checkbox">
             <label>
-            <%= f.check_box :blood_gas_test %><%= f.label :blood_gas_test %>
+              <input type="checkbox" name="blood_gas_test" value="true"> Blood Gas Test
           </label>
           </div>
           <div class="terms">

@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
 
     respond_to do |format|
-      if params[:user][:blood_gas_test] == '1' and params[:accept].present?
+      if params[:blood_gas_test].present? and params[:accept].present?
         if @user.save
           format.html { redirect_to :back, notice: 'The form has been submitted successfully' }
           format.json { render json: @user, status: :created, location: @user }
