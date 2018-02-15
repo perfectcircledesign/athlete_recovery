@@ -39,12 +39,6 @@ ActiveRecord::Schema.define(:version => 20180207130643) do
   add_index "admins", ["email"], :name => "index_admins_on_email", :unique => true
   add_index "admins", ["reset_password_token"], :name => "index_admins_on_reset_password_token", :unique => true
 
-  create_table "legals", :force => true do |t|
-    t.string   "terms"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "page_contents", :force => true do |t|
     t.string   "about"
     t.datetime "created_at", :null => false
