@@ -19,7 +19,7 @@ body { @include main_font() }
 h1, h3 {font-family: 'Sinkin Sans 400', sans-serif}
 $blue: #80deea;
 
-.header {height: 700px; background: url(../images/banner.jpg) center bottom / cover; padding: 80px 0;
+.header {height: 700px; background: url(https://image.ibb.co/kMycVn/banner.jpg) center bottom / cover; padding: 80px 0;
 	h1, h3 {color: #ffffff;}
 	h1 {font-size: 60px; margin: 0;}
 	h3 {font: 30px; margin: 10px 0 0}
@@ -30,7 +30,7 @@ $blue: #80deea;
 	p {font-size: 16px; margin-bottom: 20px;}
 }
 
-.form {background: url(../images/gradient.jpg) center bottom / cover;
+.form {background: url(https://image.ibb.co/fJ7nVn/gradient.jpg) center bottom / cover;
 	.form-box {background: #fff; border: 1px solid #b7b7b7; position: relative; top: -100px; padding: 30px;
 		h1 {color: $blue; margin: 0 0 60px; font-size: 36px;}
 		input[type='text'] {border: none; border-bottom: 1px solid #b7b7b7; width: 100%; margin-bottom: 30px; padding: 5px;}
