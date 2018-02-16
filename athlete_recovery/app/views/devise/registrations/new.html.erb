@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid text-center">
   <div class="form-group">
   <h2>Sign up</h2>
 
@@ -6,13 +6,13 @@
     <%= devise_error_messages! %>
 
     <div><%= f.label :email %><br />
-    <%= f.email_field :email, :class=> "form-control", :style => "width:30%;" %></div>
+    <%= f.email_field :email, :class=> "form-control center-block", :style => "width:30%" %></div>
 
     <div><%= f.label :password %><br />
-    <%= f.password_field :password, :class=> "form-control", :style => "width:30%;" %></div>
+    <%= f.password_field :password, :class=> "form-control center-block", :style => "width:30%;" %></div>
 
     <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, :class=> "form-control", :style => "width:30%;" %></div>
+    <%= f.password_field :password_confirmation, :class=> "form-control center-block", :style => "width:30%;" %></div>
     <br>
     <div><%= f.submit "Sign up", :class=> "btn" %></div>
   <% end %>

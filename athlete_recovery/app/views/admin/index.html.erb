@@ -20,8 +20,7 @@
     <th>ID NUMBER</th>
     <th>EMAIL</th>
     <th>PHONE</th>
-    <th>RESTING HEART RATE</th>
-    <th>BLOOD GAS TEST</th>
+    <th>RESTING HEART RATE (BPM)</th>
     <th>SIGN_UP_DATE</th>
     <th>ACTIONS</th>
   </tr>
@@ -33,7 +32,6 @@
 		<td><%=user.email%></td>
 		<td><%=user.phone%></td>
 		<td><%=user.resting_heart_rate%></td>
-		<td><%=user.blood_gas_test%></td>
 		<td><%=user.created_at%></td>
 		<td><%= link_to "Edit", edit_user_path(user) %></td>
 	</tr>
