@@ -11,6 +11,7 @@
  *= require_self
  *= require_tree .
  */
+ /*# sourceMappingURL=application.css.map */
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
@@ -112,6 +113,4 @@ h1, h3 {
     .header h1 {
         font-size: 30px; }
     .header h3 {
-        font-size: 15px; } }
-
-/*# sourceMappingURL=application.css.map */
+        font-size: 15px; }}
