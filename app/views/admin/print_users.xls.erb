@@ -13,7 +13,6 @@
         <Cell><Data ss:Type="String">EMAIL</Data></Cell>
         <Cell><Data ss:Type="String">PHONE</Data></Cell>
         <Cell><Data ss:Type="String">HEART RATE</Data></Cell>
-        <Cell><Data ss:Type="String">BLOOD GAS TEST</Data></Cell>
         <Cell><Data ss:Type="String">SIGN UP DATE</Data></Cell>
       </Row>
     <% @users.each do |user| %>
@@ -24,7 +23,6 @@
         <Cell><Data ss:Type="String"><%= user.email %></Data></Cell>
         <Cell><Data ss:Type="String"><%= user.phone %></Data></Cell>
         <Cell><Data ss:Type="Number"><%= user.resting_heart_rate %></Data></Cell>
-        <Cell><Data ss:Type="String"><%= user.blood_gas_test %></Data></Cell>
         <Cell><Data ss:Type="String"><%= user.created_at %></Data></Cell>
       </Row>
     <% end %>

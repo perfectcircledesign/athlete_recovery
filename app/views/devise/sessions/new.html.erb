@@ -1,13 +1,13 @@
-<div class="container-fluid">
-  <div class="form-group">
+<div class="container-fluid text-center">
+  <div class="form-group ">
     <h2>Sign in</h2>
 
     <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
       <div><%= f.label :email %><br />
-      <%= f.email_field :email, :class=> "form-control", :style => "width:30%;"  %></div>
+      <%= f.email_field :email, :class=> "form-control center-block", :style => "width:30%;"  %></div>
 
       <div><%= f.label :password %><br />
-      <%= f.password_field :password, :class=> "form-control", :style => "width:30%;"  %></div>
+      <%= f.password_field :password, :class=> "form-control center-block", :style => "width:30%;"  %></div>
 
       <% if devise_mapping.rememberable? -%>
         <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
