@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Chocolate Milk Study</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/application.css" />
+
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="javascripts/bootstrap.min.js"></script>
+  <script src="javascripts/application.js"></script>
+
+</head>
+
+<body>
+
+<div class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1 class="text-center">Athlete Recovery</h1>
+        <h3 class="text-center">Medical Research</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="body-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+        <h1>About</h1>
+        <p>Now that I have your attention, I would like to remind you that in any endurance event, recovery is just as important as training and preparation. The staff in the medical tent at Ironman want to provide athletes with the best recovery fluid intervention possible. I am one of the doctors that will be working in your medical tent on the day. My name is Dr Lizanne Pieterse, and I graduated from the UFS in 2011 and became a qualified general practitioner in 2015. My love for sport medicine has always been a part of me and since 2014 have become actively involved in the medical team at the Ironman SA in Port Elizabeth.</p>
+        <p>I am currently in my final year of doing my Masters in Sports Medicine at the University of Pretoria. I have always strived to do the best for my patients and am currently doing my research on ways to improve athlete management during Ironman. In my study, I will be looking at recovery intervention in the medical tent: Chocolate flavoured milk vs Water/Coke. Follow the link if you are curious to read more and would like to take part in my study. Good Luck! “Every Champion was once a contender that refused to give up” -Rocky Balboa</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="form">
+  <div class="container">
+    <div class="row">
+      <%= form_for(@user) do |f| %>
+          <% if @user.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+                <ul>
+                  <% @user.errors.full_messages.each do |msg| %>
+                      <li><%= msg %></li>
+                  <% end %>
+                </ul>
+              </div>
+          <% end %>
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <div class="form-box">
+          <h1>Sign up</h1>
+            <%= f.text_field :name, placeholder: "Name" %>
+            <%= f.text_field :surname, placeholder: "Surname" %>
+            <%= f.text_field :id_number, placeholder: "ID Number" %>
+            <%= f.text_field :email, placeholder: "Email" %>
+            <%= f.text_field :phone, placeholder: "Phone" %>
+            <%= f.number_field :resting_heart_rate, placeholder: "Resting Heart Rate", :style => "border: none; border-bottom: 1px solid #b7b7b7;margin-bottom: 30px;padding: 5px;" %>
+          <br><hr>
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="blood_gas_test" value="true"> Blood Gas Test
+          </label>
+          </div>
+          <div class="terms">
+            <strong>Terms and Conditions</strong><hr>
+            <b>The Comparison of Flavoured Milk Drink (Steri Stumpie) to Standard Care Of Practice as a Recovery Intervention in Ironman Athletes in the Medical Tent</b>
+            <ul>
+              <h5>INCLUSION CRITERIA:</h5>
+              <li>Must be an officially register Ironman SA participating athlete</li>
+              <li>Must present with a race number and timing clip to the medical tent with any of the following exertional related conditions: EAC, EAH, clinical dehydration, mild hyponatraemia, glycaemic value between 2.2 – 4 mmol/l, exhaustion/fatigue, hyper/hypothermia (conscious), exercise associated muscle cramps</li>
+              <li>Above 18 years of age</li>
+            </ul>
+            <br>
+            <ul>
+              <h5>EXCLUSION CRITERIA:</h5>
+              <lable>Participant will be excluded from the study if they:</lable>
+              <li>Are in need of direct hospitalization </li>
+              <li>Present with a medical emergency  </li>
+              <li>Are suffering from non-exercise associated collapse e.g. blue water bottle stings, sun burn, trauma, asthma, Bronchospasm </li>
+              <li>Suffer from trauma related collapsed e.g. ankle, knee, hip injuries causing collapse</li>
+              <li>Present with soft tissue injury</li>
+              <li>Refuse treatment</li>
+              <li>Are lactose intolerant</li>
+              <li>Do not consent to participation in the study</li>
+              <li>Are underage or not officially participating in the event on the specified date</li>
+            </ul>
+
+            <h5><b>Contact Details:</b></h5>
+            <label>Dr Lizanne Pieterse</label><br>
+            <label>dr.lizanne.pieterse@gmail.com</label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="accept" value="true"> By ticking this box, I/we accept that I/we have read and acknowledge the above mentioned T&C's and give my consent to be part of this study.
+            </label>
+          </div>
+          <%= f.submit "Register", :class=> "button"%>
+          <i>Please tick all checkboxes before submitting. Your application will only be considered if you accept the tests and conditions</i>
+        </div>
+      </div>
+      <%end%>
+    </div>
+  </div>
+</div>
+
+<div class="copyright">
+  <p>All Rights Reserved © Web design by Perfect Circle</p>
+</div>
+
+
+
+
+</body>
+</html>
